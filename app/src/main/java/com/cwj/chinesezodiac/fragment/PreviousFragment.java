@@ -14,9 +14,7 @@ import com.cwj.chinesezodiac.base.BaseFragment;
 public class PreviousFragment extends BaseFragment {
     @Override
     protected void initData(Bundle savedInstanceState) {
-
     }
-
     @Override
     protected void httpDate() {
 
