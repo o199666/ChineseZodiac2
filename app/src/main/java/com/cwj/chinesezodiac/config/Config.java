@@ -1,4 +1,4 @@
-package com.cwj.chinesezodiac;
+package com.cwj.chinesezodiac.config;
 
 import java.util.ArrayList;
 import java.util.List;

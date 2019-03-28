@@ -1,4 +1,4 @@
-package com.cwj.chinesezodiac;
+package com.cwj.chinesezodiac.entity;
 
 import cn.bmob.v3.BmobObject;
 

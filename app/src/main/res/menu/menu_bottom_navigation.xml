@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_one"
+        android:icon="@drawable/bottom_one_selector"
+        android:title="当期" />
+    <item
+        android:id="@+id/item_two"
+        android:icon="@drawable/bottom_two_selector"
+        android:title="往期" />
+    <item
+        android:id="@+id/item_data"
+        android:icon="@drawable/bottom_data_selector"
+        android:title="资料" />
+    <item
+        android:id="@+id/item_admin"
+        android:icon="@drawable/bottom_admin_selector"
+        android:title="会员" />
+</menu>

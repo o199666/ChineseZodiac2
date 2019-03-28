@@ -1,25 +1,22 @@
-package com.cwj.chinesezodiac;
+package com.cwj.chinesezodiac.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
+import com.cwj.chinesezodiac.R;
 import java.util.ArrayList;
-
-import static com.cwj.chinesezodiac.Config.SFENXIS;
-
+import static com.cwj.chinesezodiac.config.Config.SFENXIS;
 /**
  * Created by CWJ on 2019/3/19.
  * Author:Chen
  * Email:1181620038@qq.com
  * Ver:1
- * DEC:
+ * DEC:结果。
  */
 public class ResultActivity extends AppCompatActivity {
     private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;
     ArrayList<String> infoList;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +36,7 @@ public class ResultActivity extends AppCompatActivity {
         infoList = new ArrayList<String>();
         infoList = getIntent().getStringArrayListExtra("infoList");
         re();
+
     }
 
     int a, b, c, d, e, f, g, h, l, j, k, o;
@@ -98,7 +96,6 @@ public class ResultActivity extends AppCompatActivity {
 
         }
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -19,48 +19,54 @@ import com.orhanobut.logger.Logger;
  * DEC: 所有页面的父类
  */
 public abstract class BaseFragment extends Fragment {
-
     protected BaseActivity mActivity;
     protected final String TAG = this.getClass().getSimpleName();
+
     @Override
     public void onAttach(Context Context) {
         super.onAttach(Context);
         mActivity = (BaseActivity) Context;
         Logger.d(TAG + "：onAttach：附加");
     }
+
+    /**
+     * 初始化控件
+     * @param view
+     */
+    protected abstract void initView(View view);
+
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         if (isVisibleToUser) {
             Logger.d(TAG + "不涉及UI：setUserVisibleHint：可见");
         }
     }
+
+    /**
+     * 设置布局位置。
+     *
+     * @return
+     */
+    protected abstract int setView();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Logger.d(TAG + "：onCreate");
     }
 
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        View view = inflater.inflate(setView(), container, false);
-//        return view;
-//    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Logger.d(TAG + "：onCreateView：创建视图");
-
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate(setView(), container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Logger.d(TAG + "：onViewCreated：视图创建完毕");
-
-//        init(view);
+        initView(view);
     }
 
     @Override
@@ -68,7 +74,6 @@ public abstract class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         initData(savedInstanceState);
         Logger.d(TAG + "：onActivityCreated:页面完成");
-
     }
 
     @Override
@@ -110,7 +115,6 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         Logger.d(TAG + "：onDestroy: 销毁整个页面");
-
     }
 
     @Override
@@ -123,6 +127,11 @@ public abstract class BaseFragment extends Fragment {
 
 //    protected abstract void init(View view);
 
+    /**
+     * 静态数据
+     *
+     * @param savedInstanceState
+     */
     protected abstract void initData(Bundle savedInstanceState);
 
     /**

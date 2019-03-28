@@ -11,30 +11,33 @@ import com.cwj.chinesezodiac.base.BaseFragment;
  * Author:Chen
  * Email:1181620038@qq.com
  * Ver:1
- * DEC: 往期
+ * DEC: 管理/代理页面。需要输入授权码即可进入
  */
-public class PreviousFragment extends BaseFragment {
+public class AdminFragment extends BaseFragment {
     @Override
     protected void initView(View view) {
+
     }
 
     @Override
     protected int setView() {
-        return R.layout.fragment_previous;
+        return R.layout.fragment_admin;
     }
 
     @Override
     protected void initData(Bundle savedInstanceState) {
+
     }
 
     @Override
     protected void httpDate() {
+
     }
 
-    public static PreviousFragment newInstance(String info) {
-        PreviousFragment oneFragment = new PreviousFragment();
+    public static AdminFragment newInstance(String info) {
+        AdminFragment oneFragment = new AdminFragment();
         Bundle args = new Bundle();
-        args.putString("info", "prev");
+        args.putString("info", "admin");
         oneFragment.setArguments(args);
         return oneFragment;
     }
