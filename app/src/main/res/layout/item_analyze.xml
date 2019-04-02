@@ -1,0 +1,339 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/periods"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:text="第34期"
+        android:textColor="@color/colorBlue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/shu"
+
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="鼠"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/niu"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="牛"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/shu"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/hu"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="虎"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/niu"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/tu"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="兔"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/hu"
+
+        app:layout_constraintTop_toBottomOf="@+id/periods"
+
+        />
+
+    <TextView
+        android:id="@+id/longg"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="龙"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/tu"
+        app:layout_constraintTop_toBottomOf="@+id/periods"
+
+        />
+
+    <TextView
+        android:id="@+id/she"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="蛇"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/longg"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/ma"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="马"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/she"
+        app:layout_constraintTop_toBottomOf="@+id/periods"
+
+        />
+
+    <TextView
+        android:id="@+id/yang"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="羊"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/ma"
+        app:layout_constraintTop_toBottomOf="@+id/periods"
+
+        />
+
+    <TextView
+        android:id="@+id/hou"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="猴"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/yang"
+        app:layout_constraintTop_toBottomOf="@+id/periods"
+
+        />
+
+    <TextView
+        android:id="@+id/ji"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="鸡"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/hou"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/gou"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="狗"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/ji"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/zhu"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="猪"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/gou"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <!--第二行-->
+    <TextView
+        android:id="@+id/shu_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="12"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/shu" />
+
+    <TextView
+        android:id="@+id/niu_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="牛"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/shu_tv"
+        app:layout_constraintTop_toBottomOf="@+id/niu" />
+
+
+    <TextView
+        android:id="@+id/hu_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="虎"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/niu_tv"
+        app:layout_constraintTop_toBottomOf="@+id/hu" />
+
+    <TextView
+        android:id="@+id/tu_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="兔"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/hu_tv"
+        app:layout_constraintTop_toBottomOf="@+id/tu" />
+
+    <TextView
+        android:id="@+id/longg_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="龙"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/tu_tv"
+        app:layout_constraintTop_toBottomOf="@+id/longg" />
+
+    <TextView
+        android:id="@+id/she_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="蛇"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/longg_tv"
+        app:layout_constraintTop_toBottomOf="@+id/she" />
+
+    <TextView
+        android:id="@+id/ma_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="马"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/she_tv"
+        app:layout_constraintTop_toBottomOf="@+id/ma" />
+
+    <TextView
+        android:id="@+id/yang_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="羊"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/ma_tv"
+        app:layout_constraintTop_toBottomOf="@+id/yang" />
+
+    <TextView
+        android:id="@+id/hou_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="猴"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/yang_tv"
+        app:layout_constraintTop_toBottomOf="@+id/hou" />
+
+    <TextView
+        android:id="@+id/ji_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="鸡"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/hou_tv"
+        app:layout_constraintTop_toBottomOf="@+id/ji" />
+
+    <TextView
+        android:id="@+id/gou_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="狗"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/ji_tv"
+        app:layout_constraintTop_toBottomOf="@+id/gou" />
+
+    <TextView
+        android:id="@+id/zhu_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shaper_boder"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="猪"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/gou_tv"
+        app:layout_constraintTop_toBottomOf="@+id/zhu" />
+
+</android.support.constraint.ConstraintLayout>
+

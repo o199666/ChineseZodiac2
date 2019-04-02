@@ -1,7 +1,9 @@
 package com.cwj.chinesezodiac.fragment;
 
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +17,13 @@ import com.cwj.chinesezodiac.base.BaseFragment;
 import com.cwj.chinesezodiac.fragment.previous.Pre_AnalyzeFragment;
 import com.cwj.chinesezodiac.fragment.previous.Pre_ResultsFragment;
 
+import net.lucode.hackware.magicindicator.MagicIndicator;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
+
 /**
  * Created by CWJ on 2019/3/27.
  * Author:Chen
@@ -26,6 +35,9 @@ public class PreviousFragment extends BaseFragment {
     private ViewPager viewPager;
     private BottomNavigationView pre_top_navigation;
     private MenuItem pre_menuItem;
+    private MagicIndicator magicIndicator;
+    private CommonNavigator commonNavigator;
+
     @Override
     protected void initView(View view) {
         pre_top_navigation = view.findViewById(R.id.pre_top_navigation);
@@ -41,6 +53,7 @@ public class PreviousFragment extends BaseFragment {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
             }
+
             @Override
             public void onPageSelected(int i) {
                 if (pre_menuItem != null) {
@@ -59,12 +72,14 @@ public class PreviousFragment extends BaseFragment {
         });
         setupViewPager(viewPager);
     }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(mActivity.getSupportFragmentManager());
         adapter.addFragment(Pre_ResultsFragment.newInstance("往期开奖结果"));
         adapter.addFragment(Pre_AnalyzeFragment.newInstance("往期分析结果"));
         viewPager.setAdapter(adapter);
     }
+
     @Override
     protected int setView() {
         return R.layout.fragment_previous;

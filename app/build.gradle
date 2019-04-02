@@ -43,4 +43,6 @@ dependencies {
     api 'com.orhanobut:logger:1.15'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+    //MagicIndicator
+    api'com.github.hackware1993:MagicIndicator:1.5.0'
 }

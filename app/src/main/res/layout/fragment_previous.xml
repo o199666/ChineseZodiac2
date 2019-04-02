@@ -2,16 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent">
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/pre_top_navigation"
+        android:layout_marginTop="-20dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/baise"
         app:itemTextColor="@drawable/bottom_navigation_color_selector"
         app:labelVisibilityMode="auto"
+        android:autofillHints="@string/app_name"
         app:menu="@menu/menu_pre_navigation" />
+
+
     <android.support.v4.view.ViewPager
         android:id="@+id/pre_viewpager"
         android:layout_width="match_parent"

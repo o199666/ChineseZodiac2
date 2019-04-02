@@ -22,16 +22,14 @@ public class AdminFragment extends BaseFragment {
     protected int setView() {
         return R.layout.fragment_admin;
     }
+
     @Override
     protected void initData(Bundle savedInstanceState) {
 
     }
-
     @Override
     protected void httpDate() {
-
     }
-
     public static AdminFragment newInstance(String info) {
         AdminFragment oneFragment = new AdminFragment();
         Bundle args = new Bundle();

@@ -17,14 +17,11 @@ import com.cwj.chinesezodiac.fragment.PreviousFragment;
 public class Pre_ResultsFragment extends BaseFragment{
     @Override
     protected void initView(View view) {
-
     }
-
     @Override
     protected int setView() {
         return R.layout.fragment_pre_results;
     }
-
     @Override
     protected void initData(Bundle savedInstanceState) {
 
