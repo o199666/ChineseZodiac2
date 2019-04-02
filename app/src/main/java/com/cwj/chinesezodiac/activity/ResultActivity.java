@@ -4,9 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
 import com.cwj.chinesezodiac.R;
+
 import java.util.ArrayList;
+
 import static com.cwj.chinesezodiac.config.Config.SFENXIS;
+
 /**
  * Created by CWJ on 2019/3/19.
  * Author:Chen
@@ -96,6 +100,7 @@ public class ResultActivity extends AppCompatActivity {
 
         }
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

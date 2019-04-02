@@ -16,14 +16,12 @@ import com.cwj.chinesezodiac.base.BaseFragment;
 public class AdminFragment extends BaseFragment {
     @Override
     protected void initView(View view) {
-
     }
 
     @Override
     protected int setView() {
         return R.layout.fragment_admin;
     }
-
     @Override
     protected void initData(Bundle savedInstanceState) {
 

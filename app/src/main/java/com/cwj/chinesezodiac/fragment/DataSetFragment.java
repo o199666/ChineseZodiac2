@@ -1,10 +1,14 @@
 package com.cwj.chinesezodiac.fragment;
 
+import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -14,8 +18,6 @@ import com.cwj.chinesezodiac.base.BaseFragment;
 import com.cwj.chinesezodiac.entity.Word;
 import com.cwj.chinesezodiac.entity.web;
 import com.tencent.smtt.sdk.WebChromeClient;
-import com.tencent.smtt.sdk.WebView;
-import com.tencent.smtt.sdk.WebViewClient;
 
 import java.util.List;
 
@@ -36,15 +38,19 @@ public class DataSetFragment extends BaseFragment {
     private RecyclerView recyclerView;
     private WebView tt_wv;
 
+
     @Override
     protected void initView(View view) {
         recyclerView = view.findViewById(R.id.web_list);
         tt_wv = view.findViewById(R.id.tt_wv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        tt_wv.setVisibility(View.GONE);
 
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 
     public void initWeb(String URL) {
+        tt_wv.setVisibility(View.VISIBLE);
+//        webView.loadUrl("http://www.google.com/")
         tt_wv.getSettings().setSupportZoom(true); //支持缩放，默认为true。是下面那个的前提。
         tt_wv.getSettings().setBuiltInZoomControls(true); //设置内置的缩放控件。若为false，则该WebView不可缩放
         tt_wv.getSettings().setDisplayZoomControls(true); //隐藏原生的缩放控件
@@ -54,11 +60,21 @@ public class DataSetFragment extends BaseFragment {
         tt_wv.loadUrl(URL);
         //该界面打开更多链接
         tt_wv.setWebViewClient(new WebViewClient() {
-
             @Override
             public boolean shouldOverrideUrlLoading(WebView webView, String s) {
                 webView.loadUrl(s);
                 return true;
+            }
+        });
+        tt_wv.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+//                super.onReceivedSslError(view, handler, error);
+                //handler.cancel();// super中默认的处理方式，WebView变成空白页
+                if (handler != null) {
+                    //忽略证书的错误继续加载页面内容，不会变成空白页面
+                    handler.proceed();
+                }
             }
         });
     }
@@ -67,7 +83,6 @@ public class DataSetFragment extends BaseFragment {
     protected int setView() {
         return R.layout.fragment_dataset;
     }
-
 
     @Override
     protected void initData(Bundle savedInstanceState) {
@@ -86,6 +101,7 @@ public class DataSetFragment extends BaseFragment {
         return oneFragment;
     }
 
+    //查询资料
     private void query() {
         BmobQuery<web> bmobQuery = new BmobQuery<>();
         bmobQuery.findObjects(new FindListener<web>() {

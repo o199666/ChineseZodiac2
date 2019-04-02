@@ -69,7 +69,6 @@ public class UnderwayFragment extends BaseFragment implements View.OnClickListen
         }
     }
     void testQuerya(){
-
         for (int i = 0; i < 19; i++) {
             add("萨克等哈开啥都好");
         }
