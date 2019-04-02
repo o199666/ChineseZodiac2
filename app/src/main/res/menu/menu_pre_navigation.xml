@@ -4,10 +4,10 @@
     <item
         android:id="@+id/item_one"
         android:icon="@null"
-        android:title="开奖结果" />
+        android:title="平台预测" />
     <item
         android:id="@+id/item_two"
         android:icon="@null"
-        android:title="平台预测" />
+        android:title="开奖结果" />
 
 </menu>

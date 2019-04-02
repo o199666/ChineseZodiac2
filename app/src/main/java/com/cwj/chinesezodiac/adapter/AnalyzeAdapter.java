@@ -35,6 +35,7 @@ public class AnalyzeAdapter extends RecyclerView.Adapter<AnalyzeAdapter.MyViewHo
         View view = LayoutInflater.from(context).inflate(R.layout.item_analyze, viewGroup, false);
         return new MyViewHolder(view);
     }
+
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder vh, int i) {
         vh.periods.setText(list.get(i).getPeriods());
